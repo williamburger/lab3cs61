@@ -1,0 +1,43 @@
+original_id = ObjectId()
+original_id2 = ObjectId()
+db.authors.insertMany([
+  {
+    "_id": original_id,
+    "order": 1,
+    "name": "Heratio ma Dude",
+    "email": "lkj@taco.com",
+    "address": "10 webster",
+    "affiliation": "dartmouth",
+  }
+  {
+    "_id": original_id2,
+    "order": 2,
+    "name": "Zoro",
+    "email": "z@legend.com",
+    "address": "11 webster",
+    "affiliation": "Mexico",
+  }
+  ])
+db.manuscript.insertMany(
+[
+{
+    "manuscriptnum": 1,
+    "title": "Of Mice and Men",
+    "datereceived": "09/19/97",
+    "authors": [{
+      "author1": original_id,
+    }
+    {
+      "author2": original_id2,
+    }],
+    "status": "Received",
+    "dateupdated": "03/23/13",
+    "numpages": 12,
+    "order": 1,
+    "beginningpagenum": 33,
+    "idissue": 1,
+    "ricode": 2,
+    "editorid": 4322,
+},
+]
+)
