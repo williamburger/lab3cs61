@@ -19,6 +19,13 @@ db.manuscript.find( {"ricode":{ $in: db.reviewers.findOne().interests }}).pretty
 db.reviewers.find({},{ "interests":1, "_id":0 })
 
 db.manuscript.find({ "authors": db.authors.findOne()._id }).pretty()
+
 db.manuscript.find({ "editorid": db.editors.findOne()._id }).pretty().count()
+
 db.manuscript.find({ "idissue": db.issues.findOne()._id }).pretty().count()
+
 db.reviewers.find( {"interests": db.manuscript.findOne().ricode} )
+
+db.manuscript.findOneAndUpdate({"_id":db.manuscript.findOne()._id}, { $set : {"status":"rejected"}})
+
+db.manuscript.findOneAndUpdate({"_id":db.manuscript.findOne()._id}, { $set : {"order":5}})
