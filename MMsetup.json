@@ -2,6 +2,7 @@ db.authors.drop()
 db.reviewers.drop()
 db.manuscript.drop()
 db.interests.drop()
+db.editors.drop()
 
 original_id = ObjectId()
 original_id2 = ObjectId()
@@ -21,6 +22,27 @@ db.authors.insertMany([
     "affiliation": "Mexico",
   }
   ])
+
+issueid = ObjectId()
+
+db.issues.insertMany([
+  {
+    "_id":issueid,
+    "issueName":"",
+    "periodnum":"",
+    "year":"",
+    "volume":"",
+    "number":"",
+    "printDate":"",
+  }
+  ])
+
+editor_id = ObjectId()
+
+db.editors.insertMany([{
+  "_id": editor_id,
+  "name": "Supreme Editor"
+  }])
 
 reviewer_id = ObjectId()
 reviewer_id2 = ObjectId()
@@ -91,9 +113,10 @@ db.manuscript.insertMany(
     "numpages": 12,
     "order": 1,
     "beginningpagenum": 33,
-    "idissue": 1,
+    "idissue": issueid,
     "ricode": 2,
-    "editorid": 4322,
+    "editorid": editor_id,
+    "document": "Document goes here",
 },
 ]
 )
