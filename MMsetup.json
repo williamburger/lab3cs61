@@ -6,6 +6,10 @@ db.editors.drop()
 
 original_id = ObjectId()
 original_id2 = ObjectId()
+original_id3 = ObjectId()
+original_id4 = ObjectId()
+original_id5 = ObjectId()
+
 db.authors.insertMany([
   {
     "_id": original_id,
@@ -20,6 +24,27 @@ db.authors.insertMany([
     "email": "z@legend.com",
     "address": "11 webster",
     "affiliation": "Mexico",
+  }
+  {
+    "_id": original_id3,
+    "name": "Julio",
+    "email": "jmadison@legend.com",
+    "address": "44 webster",
+    "affiliation": "Merica",
+  }
+  {
+    "_id": original_id4,
+    "name": "James Johnathan",
+    "email": "jj@gmail.com",
+    "address": "UNITED STATES",
+    "affiliation": "The Ritz",
+  }
+  {
+    "_id": original_id5,
+    "name": "Toxic Muffins",
+    "email": "TM@legend.com",
+    "address": "44 Muffin Lane",
+    "affiliation": "Muffins4You",
   }
   ])
 
@@ -47,6 +72,9 @@ db.editors.insertMany([{
 reviewer_id = ObjectId()
 reviewer_id2 = ObjectId()
 reviewer_id3 = ObjectId()
+reviewer_id4 = ObjectId()
+reviewer_id5 = ObjectId()
+reviewer_id6 = ObjectId()
 
 db.reviewers.insertMany([
   {
@@ -72,6 +100,30 @@ db.reviewers.insertMany([
     "affiliation": "krts",
     "status": "active",
     "interests": [23,2,4],
+  }
+  {
+    "_id": reviewer_id4,
+    "name": "ogren legndosn",
+    "email": "haha@gmail.com",
+    "affiliation": "clownAcademy",
+    "status": "active",
+    "interests": [6,7,4],
+  }
+  {
+    "_id": reviewer_id5,
+    "name": "tacobell bill",
+    "email": "djoker@gmail.com",
+    "affiliation": "TennisSchool",
+    "status": "active",
+    "interests": [23,21,14],
+  }
+  {
+    "_id": reviewer_id6,
+    "name": "John jacob heimerschmidt",
+    "email": "coolio@gmail.com",
+    "affiliation": "CoolKids",
+    "status": "active",
+    "interests": [1,2,8],
   }
   ])
 
