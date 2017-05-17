@@ -1,0 +1,18 @@
+
+db.manuscript.find({"status":"under review"}).pretty()
+
+db.manuscript.find({"status":"accepted"}).pretty()
+
+db.manuscript.find({"status":"rejected"}).pretty()
+
+db.manuscript.find({"status":"received"}).pretty()
+
+db.manuscript.find({"status":"submitted"}).pretty()
+
+db.manuscript.find({"status":"scheduled"}).pretty()
+
+db.manuscript.find({ "reviews": { $elemMatch: { "reviewerid": db.reviewers.findOne()._id} } }).pretty()
+
+db.manuscript.find( {"ricode":{ $in: db.reviewers.findOne().interests }}).pretty()
+
+db.reviewers.find({},{ "interests":1, "_id":0 })
