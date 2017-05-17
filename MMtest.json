@@ -1,4 +1,5 @@
 
+
 db.manuscript.find({"status":"under review"}).pretty()
 
 db.manuscript.find({"status":"accepted"}).pretty()
@@ -16,3 +17,8 @@ db.manuscript.find({ "reviews": { $elemMatch: { "reviewerid": db.reviewers.findO
 db.manuscript.find( {"ricode":{ $in: db.reviewers.findOne().interests }}).pretty()
 
 db.reviewers.find({},{ "interests":1, "_id":0 })
+
+db.manuscript.find({ "authors": db.authors.findOne()._id }).pretty()
+db.manuscript.find({ "editorid": db.editors.findOne()._id }).pretty().count()
+db.manuscript.find({ "idissue": db.issues.findOne()._id }).pretty().count()
+db.reviewers.find( {"interests": db.manuscript.findOne().ricode} )
