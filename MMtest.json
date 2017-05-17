@@ -1,5 +1,3 @@
-
-
 db.manuscript.find({"status":"under review"}).pretty()
 
 db.manuscript.find({"status":"accepted"}).pretty()
@@ -29,3 +27,5 @@ db.reviewers.find( {"interests": db.manuscript.findOne().ricode} )
 db.manuscript.findOneAndUpdate({"_id":db.manuscript.findOne()._id}, { $set : {"status":"rejected"}})
 
 db.manuscript.findOneAndUpdate({"_id":db.manuscript.findOne()._id}, { $set : {"order":5}})
+
+db.reviewers.update( {"_id": db.reviewers.findOne()._id}, {$set: {"status":"inactive"}})
