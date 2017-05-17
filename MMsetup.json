@@ -327,7 +327,7 @@ db.manuscript.insertMany(
       "document": "Document goes here",
     },
     {
-        "title": "Revenge of the Burger",
+        "title": "A New Burger",
         "datereceived": "11/15/2004",
         "authors": [original_id,original_id5],
         "reviews": [{"reviewerid":reviewer_id,
@@ -366,7 +366,7 @@ db.manuscript.insertMany(
         "document": "Document goes here",
       },
       {
-          "title": "Revenge of the Burger",
+          "title": "The Last Burger",
           "datereceived": "11/15/2004",
           "authors": [original_id3,original_id2],
           "reviews": [{"reviewerid":reviewer_id,
@@ -405,7 +405,7 @@ db.manuscript.insertMany(
           "document": "Document goes here",
         },
         {
-            "title": "Revenge of the Burger",
+            "title": "Attack of the Burgers",
             "datereceived": "11/15/2004",
             "authors": [original_id,original_id2],
             "reviews": [{"reviewerid":reviewer_id,
