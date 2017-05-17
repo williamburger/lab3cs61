@@ -25,21 +25,21 @@ db.authors.insertMany([
     "email": "z@legend.com",
     "address": "11 webster",
     "affiliation": "Mexico",
-  }
+  },
   {
     "_id": original_id3,
     "name": "Julio",
     "email": "jmadison@legend.com",
     "address": "44 webster",
     "affiliation": "Merica",
-  }
+  },
   {
     "_id": original_id4,
     "name": "James Johnathan",
     "email": "jj@gmail.com",
     "address": "UNITED STATES",
     "affiliation": "The Ritz",
-  }
+  },
   {
     "_id": original_id5,
     "name": "Toxic Muffins",
@@ -101,7 +101,7 @@ db.reviewers.insertMany([
     "affiliation": "krts",
     "status": "active",
     "interests": [23,2,4],
-  }
+  },
   {
     "_id": reviewer_id4,
     "name": "ogren legndosn",
@@ -109,7 +109,7 @@ db.reviewers.insertMany([
     "affiliation": "clownAcademy",
     "status": "active",
     "interests": [6,7,4],
-  }
+  },
   {
     "_id": reviewer_id5,
     "name": "tacobell bill",
@@ -117,7 +117,7 @@ db.reviewers.insertMany([
     "affiliation": "TennisSchool",
     "status": "active",
     "interests": [23,21,14],
-  }
+  },
   {
     "_id": reviewer_id6,
     "name": "John jacob heimerschmidt",
@@ -290,7 +290,7 @@ db.manuscript.insertMany(
   {
       "title": "The Burger Strikes Back",
       "datereceived": "11/15/2007",
-      "authors": [original_i2,original_id4],
+      "authors": [original_id2,original_id4],
       "reviews": [{"reviewerid":reviewer_id,
                     "appropriateness": 3,
                     "clarity": 7,
