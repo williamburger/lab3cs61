@@ -60,6 +60,7 @@ db.issues.insertMany([
     "volume":"",
     "number":"",
     "printDate":"",
+    "numpages":0,
   }
   ])
 

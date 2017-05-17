@@ -10,6 +10,8 @@ db.manuscript.find({"status":"submitted"}).pretty()
 
 db.manuscript.find({"status":"scheduled"}).pretty()
 
+db.reviewers.find({ "name": "tacobell bill"}).pretty()
+
 db.manuscript.find({ "reviews": { $elemMatch: { "reviewerid": db.reviewers.findOne()._id} } }).pretty()
 
 db.manuscript.find( {"ricode":{ $in: db.reviewers.findOne().interests }}).pretty()
@@ -29,3 +31,7 @@ db.manuscript.findOneAndUpdate({"_id":db.manuscript.findOne()._id}, { $set : {"s
 db.manuscript.findOneAndUpdate({"_id":db.manuscript.findOne()._id}, { $set : {"order":5}})
 
 db.reviewers.update( {"_id": db.reviewers.findOne()._id}, {$set: {"status":"inactive"}})
+
+db.manuscript.aggregate([{ $sort: { "status": 1, "_id": 1 }}]).pretty()
+
+db.manuscript.find({ "numpages": { $lt : 15}}).pretty()
