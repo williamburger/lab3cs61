@@ -1,5 +1,3 @@
-
-
 db.manuscript.find({"status":"under review"}).pretty()
 
 db.manuscript.find({"status":"accepted"}).pretty()
@@ -22,3 +20,5 @@ db.manuscript.find({ "authors": db.authors.findOne()._id }).pretty()
 db.manuscript.find({ "editorid": db.editors.findOne()._id }).pretty().count()
 db.manuscript.find({ "idissue": db.issues.findOne()._id }).pretty().count()
 db.reviewers.find( {"interests": db.manuscript.findOne().ricode} )
+
+db.reviewers.update( {"_id": db.reviewers.findOne()._id}, {$set: {"status":"inactive"}})
